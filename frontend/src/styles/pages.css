@@ -1,0 +1,173 @@
+﻿/* Dashboard Operational Composition */
+.dashboard-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+@media (max-width: 1280px) {
+  .dashboard-main-grid {
+    grid-template-columns: 1fr 340px;
+  }
+}
+@media (max-width: 1080px) {
+  .dashboard-main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Central GIS Map Panel */
+.dashboard-map-panel {
+  display: flex;
+  flex-direction: column;
+  height: 540px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.dashboard-map-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid var(--border-color);
+  z-index: 10;
+}
+.dashboard-map-title-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.dashboard-map-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary-deep-navy);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.dashboard-map-badge {
+  font-size: 11px;
+  font-weight: 600;
+  background-color: #F0FDF4;
+  color: #15803D;
+  border: 1px solid #BBF7D0;
+  padding: 2px 8px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.dashboard-map-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.dashboard-map-view {
+  flex: 1;
+  position: relative;
+  min-height: 0;
+  width: 100%;
+}
+
+/* Right Column Operational Stack */
+.dashboard-right-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Bottom Operational Intelligence Row */
+.dashboard-bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+@media (max-width: 1280px) {
+  .dashboard-bottom-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 840px) {
+  .dashboard-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Table Scroll Container */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Citizen Hazard Report List */
+.reports-queue-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* Login Page Styling */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0E1B2A 0%, #17324D 100%);
+  padding: 20px;
+}
+.login-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-card);
+  padding: 36px 32px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.25);
+}
+.login-brand-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.login-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #0F766E;
+  background-color: #F0FDFA;
+  border: 1px solid #CCFBF1;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.login-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--primary-deep-navy);
+  letter-spacing: -0.01em;
+}
+.login-subtitle {
+  font-size: 13px;
+  color: var(--secondary-text);
+  margin-top: 4px;
+}
+.login-error {
+  background-color: #FEF2F2;
+  border: 1px solid #FECACA;
+  color: var(--critical);
+  padding: 10px 12px;
+  border-radius: var(--radius-btn);
+  font-size: 13px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
